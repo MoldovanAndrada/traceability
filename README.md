@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 for running: 
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -75,3 +76,6 @@ You can author your README using Visual Studio Code. Here are some useful editor
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
+=======
+# traceability
+>>>>>>> 0f03d6a76216fb55b600ebe2b546ec25b5e2f420
