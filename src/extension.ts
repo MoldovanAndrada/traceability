@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { exec } from 'child_process';
+import { exec, type ExecException } from 'node:child_process';
 
 let lastProcessed: string | undefined;
 
@@ -47,7 +47,7 @@ function runTraceability() {
     const scriptPath = "C:\\Users\\andrada\\Downloads\\traceability_project";
     const command = `${pythonPath} -m src.commit_runner_for_plugin`;
 
-    exec(command, { cwd: scriptPath }, (error, stdout, stderr) => {
+    exec(command, { cwd: scriptPath }, (error: ExecException | null, stdout: string, stderr: string) => {
 
         if (error) {
             vscode.window.showErrorMessage(stderr);
